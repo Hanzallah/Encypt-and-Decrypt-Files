@@ -91,6 +91,9 @@ public class EncryptDecrypt {
             }
 
         } else {
+            if ((start + (ch - start - shift)) > end){
+                return (char) (start + ((start + (ch-shift-start))-end-1));
+            }
             return (char) (start + (ch - start - shift));
         }
     }
